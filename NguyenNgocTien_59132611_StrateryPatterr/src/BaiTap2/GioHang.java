@@ -12,6 +12,11 @@ import java.util.ArrayList;
 public class GioHang {
     public int tienHang = 0;
     IThanhToan hinhThucTT;
+
+    public void setHinhThucTT(IThanhToan hinhThucTT) {
+        this.hinhThucTT = hinhThucTT;
+    }
+    
     public double thanhToan(int tienHang){
         return hinhThucTT.thanhToan(tienHang);
     }
@@ -19,17 +24,20 @@ public class GioHang {
     
     public int tienHang(){
         for (int i = 0; i < l.size(); i++){
-            tienHang += l.get(i).getGia(); 
+            tienHang = tienHang + l.get(i).getGia(); 
         }
         return tienHang;
     }
-    
+    public void them(HangHoa HH){
+        l.add(HH);
+    }
     public void inDS(){
         System.out.println("Danh sach hang hoa la :");
         for (int i = 0; i < l.size(); i++) {
-            System.out.println( "ten hang hoa: "+l.get(i).getTenHH()+
-                                "gia: "+l.get(i).getGia()+
-                                "mo ta: "+l.get(i).getMoTa());
+            System.out.println( "ten hang hoa: "+l.get(i).getTenHH()+"\n"+
+                                "gia: "+l.get(i).getGia()+"\n"+
+                                "mo ta: "+l.get(i).getMoTa()+"\n"+
+                                "tien hang: "+ tienHang +"\n");
         }
     }
 }
