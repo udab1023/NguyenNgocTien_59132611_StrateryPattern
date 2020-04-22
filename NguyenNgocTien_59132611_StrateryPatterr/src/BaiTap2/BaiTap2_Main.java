@@ -31,9 +31,11 @@ public class BaiTap2_Main {
         gh2.setHinhThucTT(new ThanhToanCOD());
         
         gh1.inDS();
-        System.out.println("So tien khach phai tra"+ gh1.thanhToan(gh1.tienHang)+"\n");
+        System.out.println("Tong tien hang: "+gh1.tongtienHang());
+        System.out.println("So tien khach phai tra: "+ gh1.thanhToan()+"\n");
         
         gh2.inDS();
-        System.out.println("\n" +"So tien khach phai tra"+ gh1.thanhToan(gh2.tienHang));
+        System.out.println("Tong tien hang: "+gh2.tongtienHang());
+        System.out.println("\n" +"So tien khach phai tra: "+ gh2.thanhToan());
     }
 }
