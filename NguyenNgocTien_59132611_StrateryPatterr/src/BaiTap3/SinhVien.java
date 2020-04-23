@@ -36,11 +36,11 @@ public class SinhVien {
         this.ngaySinh = ngaySinh;
     }
 
-    public float getDiemTB() {
+    public float getdiemTB() {
         return diemTB;
     }
 
-    public void setDiemTB(float diemTB) {
+    public void setdiemTB(float diemTB) {
         this.diemTB = diemTB;
     }
     
