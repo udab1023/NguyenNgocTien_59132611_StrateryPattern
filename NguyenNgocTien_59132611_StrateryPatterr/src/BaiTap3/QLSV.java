@@ -21,9 +21,22 @@ public class QLSV {
         dsSV.add(s);
     }
     
-    public void sapXep(){
-        int value = soSanh.getValue();
+
+    public ArrayList<SinhVien> getDsSV() {
+        return dsSV;
     }
+
+    public void setDsSV(ArrayList<SinhVien> dsSV) {
+        this.dsSV = dsSV;
+    }
+    
+    public void sapXep(){   
+        dsSV.sort((o1,o2)->
+        {
+            return soSanh.soSanh(o1, o2);
+        });
+    }
+
     public void inDS(){
         System.out.println("Danh sach sinh vien là: ");
         for (int i = 0; i < dsSV.size(); i++) {
@@ -31,4 +44,6 @@ public class QLSV {
                                 "ngay sinh: "+dsSV.get(i).getNgaySinh()+"\n"+
                                 "diem TB: "+dsSV.get(i).getdiemTB()+"\n");
     }
+}
+
 }

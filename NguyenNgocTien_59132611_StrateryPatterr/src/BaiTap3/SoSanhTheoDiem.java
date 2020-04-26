@@ -18,12 +18,6 @@ public class SoSanhTheoDiem implements ISoSanh<SinhVien>{
         else if(o1.getdiemTB()==o2.getdiemTB())
             return 0;
         else return -1;
-        float value = o2.getdiemTB()- o1.getdiemTB();
-        if (value != 0) {
-            return (int) value;
-        }
-         value = o1.getTen().compareTo(o2.getTen());
-        return (int) value;
     }
     
 }
